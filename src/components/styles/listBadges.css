@@ -1,0 +1,33 @@
+.List-badges{
+    max-width: 28rem;
+}
+
+.List-badges li{
+    align-items: center;
+    background: white;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 6px -2px rgba(0, 0, 0, 0.53);
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    margin: 1rem auto;
+    padding: 0.4rem 1rem;
+}
+
+.List-badges li .pic{
+    
+}
+
+.List-badges li .pic img{
+    border-radius: 100%;
+}
+
+.List-badges li .data{
+    display: flex;
+    flex-flow: column;
+    margin: .8rem;
+}
+
+.List-badges li .data .twitter{
+    color: skyblue;
+}
