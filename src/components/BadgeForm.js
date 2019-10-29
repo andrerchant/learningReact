@@ -5,10 +5,10 @@ class BadgeForm extends React.Component{
         jobTitle: "designer",
     };
 
-handleSubmit= e =>{
+/* handleSubmit= e =>{
     e.preventDefault();
     console.log(this.state);
-}
+} */
 
 handleClick = e =>{
     /* console.log("button happened"); */
@@ -18,7 +18,7 @@ handleClick = e =>{
         return(
             <div>
                 <h1>New Attendant</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.props.onSubmit}>
                     <div className="form-group">
                         <label>First Name</label>
                         <input 

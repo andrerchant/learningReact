@@ -17,7 +17,7 @@ class BadgesListItem extends React.Component {
                     {this.props.badge.firstName} {this.props.badge.lastName}
                 </strong>
                 <span className="twitter">
-                    @{this.props.badge.twitter}
+                    {this.props.badge.twitter}
                 </span>
                 <small>
                     {this.props.badge.jobTitle}
