@@ -74,7 +74,7 @@ class BadgeNew extends React.Component{
                             jobTitle={this.state.form.jobTitle ||  'Puesto'}
                             twitter={this.state.form.twitter ||  '@usuario'}
                             email={this.state.form.email ||  'correo@dominio.com'}
-                            // avatar={fotoAndy}
+                            avatar={this.state.form.avatar}
                         />, 
                         </div>
                         

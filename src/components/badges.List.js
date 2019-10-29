@@ -1,15 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./styles/listBadges.css";
+import Gravatar from './Gravatar';
 
 class BadgesListItem extends React.Component {
     render() {
       return (
         <div className="BadgesListItem">
             <div className="pic">
-                <img 
+                {/* <img 
                     src={this.props.badge.avatarUrl}
                     alt={this.props.badge.firstName}
+                /> */}
+                <Gravatar
+                    className="Badge__avatar"
+                    email={this.props.badge.email} 
                 />
             </div>
             <div className="data">

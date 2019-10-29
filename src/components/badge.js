@@ -7,9 +7,9 @@ import Gravatar from './Gravatar';
 class Badge extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
+        /* this.state = {
             prueba : { cosa : true},
-        }
+        } */
     }
     render(){
         
