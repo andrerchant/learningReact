@@ -14,8 +14,9 @@
     padding: 0.4rem 1rem;
 }
 
-.List-badges li .pic{
-    
+.Badge_container{
+    margin: 0 auto;
+    max-width: 28rem;
 }
 
 .List-badges li .pic img{
