@@ -9,6 +9,7 @@ import PageError from '../components/PageError';
 
 import api from '../api'
 import MiniLoader from '../components/MiniLoader';
+import { clearInterval } from 'timers';
 
 class Badges extends React.Component{
     constructor(props){
@@ -31,7 +32,11 @@ class Badges extends React.Component{
 
         this.fetchData();
 
-        setInterval(this.fetchData, 5000);
+        this.intervalId = setInterval(this.fetchData, 5000);
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.intervalId);
     }
 
     fetchData= async () => {
