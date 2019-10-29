@@ -5,16 +5,20 @@ import header from '../images/platziconf-logo.svg';
 import Badge from '../components/badge';
 import BadgeForm from '../components/BadgeForm';
 import api from '../api';
+import PageLoading from '../components/PageLoading';
 
 class BadgeNew extends React.Component{
-    state = {  form:{
-        firstName: "",
-        lastName: "",
-        email: "",
-        jobTitle: "",
-        twitter: "",
-        
-    }  };
+    state = {  
+        loading: false,
+        error: null,
+        form:{
+            firstName: "",
+            lastName: "",
+            email: "",
+            jobTitle: "",
+            twitter: "",
+        }
+    };
 
     handleChange= e =>{
         //const nextForm = this.state.form;
@@ -40,6 +44,8 @@ class BadgeNew extends React.Component{
             this.setState({
                 loading:false
             })
+
+            this.props.history.push('/badges')
         } catch (error) {
             this.setState({
                 loading:false,
@@ -50,6 +56,9 @@ class BadgeNew extends React.Component{
 
     render(){
         //const fotoAndy = "https://instagram.fmex7-1.fna.fbcdn.net/vp/1119985ce3409471f3631c73d30cdb0d/5E64C107/t51.2885-19/s150x150/49683380_796737684024181_8687158980700536832_n.jpg?_nc_ht=instagram.fmex7-1.fna.fbcdn.net";
+        if( this.state.loading ){
+            return <PageLoading />;
+        }
         return (
             <React.Fragment>
                 <div className="BadgeNew__hero">
@@ -74,6 +83,7 @@ class BadgeNew extends React.Component{
                                 onChange={this.handleChange}
                                 onSubmit={this.handleSubmit}
                                 formValues={this.state.form}
+                                error={this.state.error}
                             />
                         </div>
                     </div>

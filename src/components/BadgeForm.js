@@ -1,10 +1,6 @@
 import React from 'react';
 
 class BadgeForm extends React.Component{
-    state = {
-        jobTitle: "designer",
-    };
-
 /* handleSubmit= e =>{
     e.preventDefault();
     console.log(this.state);
@@ -74,6 +70,8 @@ handleClick = e =>{
                         className="btn btn-primary"
                         onClick={this.handleClick}
                     >Save</button>
+
+                    { this.props.error && <p className="text-danger" >{this.props.error.message}</p>}
                 </form>
             </div>
         );
